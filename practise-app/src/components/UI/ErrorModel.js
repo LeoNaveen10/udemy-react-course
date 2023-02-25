@@ -2,11 +2,20 @@ import React from 'react';
 import classes from './ErrorModel.module.css';
 import Card from './Card';
 import Button from './Button';
+import Wrapper from '../Helpers/Wrapper';
+import ReactDOM from 'react-dom';
 
+/**
+ * wrapper - is like getting the un-necessary html elements out of the applicaiton.
+ * portal - is like giving all the commonly used elements such as navbar, buttons, card etc., move stright to the root element.(below the root element)
+ */
 const ErrorModel = (props) => {
-	return (
-		<div>
-			<div className={classes.backdrop} onClick={props.okayHandler} />
+	const BackDrop = (props) => {
+		return <div className={classes.backdrop} onClick={props.okayHandler} />;
+	};
+
+	const OverLay = (props) => {
+		return (
 			<Card className={classes.modal}>
 				<header className={classes.header}>
 					<h2>{props.error.title}</h2>
@@ -18,7 +27,19 @@ const ErrorModel = (props) => {
 					<Button onClick={props.okayHandler}>Okay</Button>
 				</footer>
 			</Card>
-		</div>
+		);
+	};
+	return (
+		<Wrapper>
+			{ReactDOM.createPortal(
+				<BackDrop okayHandler={props.okayHandler} />,
+				document.getElementById('backdrop-root')
+			)}
+			{ReactDOM.createPortal(
+				<OverLay error={props.error} okayHandler={props.okayHandler} />,
+				document.getElementById('overlay-root')
+			)}
+		</Wrapper>
 	);
 };
 
