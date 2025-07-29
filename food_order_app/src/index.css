@@ -221,6 +221,13 @@ h1 {
   color: #1f1a09;
 }
 
+button:disabled {
+  opacity: 0.6; /* Reduces transparency */
+  cursor: not-allowed; /* Changes cursor to a "no-entry" symbol */
+  background-color: #cccccc; /* Example: Gray background */
+  color: #666666; /* Example: Darker text color */
+}
+
 .text-button {
   font: inherit;
   cursor: pointer;
