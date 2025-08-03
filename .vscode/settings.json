@@ -1,7 +1,31 @@
 {
-    "files.watcherExclude": {
-      "**/node_modules/**": true,
-      "**/dist/**": true,
-      "**/build/**": true
-    }
-  }
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Use prettier as default formatter
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.enable": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.bracketSpacing": true,
+  "prettier.proseWrap": "always",
+  "editor.formatOnSave": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.trailingComma": "none",
+  "files.trimTrailingWhitespace": true, // remove trailing white spaces from all lines
+  "files.trimFinalNewlines": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "sonarlint.connectedMode.project": {
+    "connectionId": "https-sonar-co2opt-de",
+    "projectKey": "co2opt_application-backend_customer-assets_AZB4AownnI2lawRNCcHJ"
+  },
+  "postman.settings.dotenv-detection-notification-visibility": false
+}
