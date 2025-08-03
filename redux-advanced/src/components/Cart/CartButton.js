@@ -1,11 +1,16 @@
-import classes from './CartButton.module.css';
+import classes from "./CartButton.module.css";
+import { useSelector } from "react-redux";
 
 const CartButton = (props) => {
+  const noOfItems = useSelector((state) => state.counter.items.length);
+  console.log(noOfItems);
   return (
-    <button className={classes.button}>
-      <span>My Cart</span>
-      <span className={classes.badge}>1</span>
-    </button>
+    noOfItems && (
+      <button className={classes.button}>
+        <span>My Cart</span>
+        <span className={classes.badge}>{noOfItems}</span>
+      </button>
+    )
   );
 };
 
