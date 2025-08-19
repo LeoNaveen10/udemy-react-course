@@ -159,6 +159,27 @@ useEffect hook demonstrations
 - **Tech**: React 18/19, Vite
 - **Features**: Side effects, cleanup, dependency arrays
 
+### 🧭 **react-routing-basic**
+
+Basic React Router implementation
+
+- **Tech**: React 19, Vite, React Router
+- **Features**: Navigation, route parameters, basic routing
+
+### 🗺️ **react-routing-advanced**
+
+Advanced React Router patterns
+
+- **Tech**: React 19, Vite, React Router
+- **Features**: Nested routes, loaders, actions, protected routes
+
+### 🔐 **authentication**
+
+User authentication implementation
+
+- **Tech**: React 19, Vite, React Router
+- **Features**: Login/logout, protected routes, token management
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -204,6 +225,7 @@ npm run dev
 - **Create React App** - React project setup
 - **Redux Toolkit** - State management
 - **Context API** - State management
+- **React Router** - Client-side routing
 - **CSS Modules** - Styling
 - **Tailwind CSS** - Utility-first CSS
 - **Express.js** - Backend API
@@ -228,6 +250,8 @@ npm run dev
 - ✅ Class Components
 - ✅ Error Boundaries
 - ✅ Styling Approaches
+- ✅ React Router & Navigation
+- ✅ Authentication & Authorization
 
 ## 📝 Notes
 
